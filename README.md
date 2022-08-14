@@ -76,24 +76,24 @@ Sumber: [Bank Marketing Campaign](https://archive.ics.uci.edu/ml/datasets/bank+m
 - y : has the client subscribed a term deposit? (binary: 'yes','no')
 
 #### Data info:
-![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/info.png?raw=true)
+![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/info.png?raw=true)
 
 ### Exploratory Data Analysis
 - Cek distribusi data categorical terhadap y:
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/distofjobanddeposit.png?raw=true)
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/distofmaritalanddeposit.png?raw=true)
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/distofeducationanddeposit.png?raw=true)
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/distofcontactanddeposit.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/distofjobanddeposit.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/distofmaritalanddeposit.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/distofeducationanddeposit.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/distofcontactanddeposit.png?raw=true)
 
 - Cek distribusi numerical data terhadap y:
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/distofcontactanddepositDurationCallofCampaign.png?raw=true)
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/DurationCallofJob.png?raw=true)
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/histofemp.var.rate.png?raw=true)
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/histofcons.price.idx.png?raw=true)
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/histofcons.conf.idx.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/DurationCallofCampaign.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/DurationCallofJob.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/histofemp.var.rate.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/histofcons.price.idx.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/histofcons.conf.idx.png?raw=true)
 
 - Cek korelasi data:
---  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/corr.png?raw=true)
+--  ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/corr.png?raw=true)
 
 ## Data Preparation
 Berikut tahapan data preparation yang dilakukan:
@@ -105,19 +105,19 @@ Berikut tahapan data preparation yang dilakukan:
 
 ### Handle outlier data
 - Cek outlier data menggunakan boxplot
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofageb.png?raw=true)
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofdurationb.png?raw=true)
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofcampaignb.png?raw=true)
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofcons.price.idx.png?raw=true)
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofcons.conf.idx.png?raw=true)
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofeuribor3m.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofageb.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofdurationb.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofcampaignb.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofcons.price.idx.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofcons.conf.idx.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofeuribor3m.png?raw=true)
 - Ditemukan 3 data yang memiliki outlier yaitu, ['age', 'duration', 'campaign']
 - Outlier dihilangkan dengan memfilter data pada kuartil pertama dikurangkan dengan 1.5 lalu dikalikan IQR, dan pada kuartil ketiga ditambahkan 1.5 lalu dikalikan IQR
 - filter = (data[cols] >= Q1 - 1.5 * IQR) & (data[cols] <= Q3 + 1.5 *IQR)
 - hasil :
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofage.png?raw=true)
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofduration.png?raw=true)
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/boxplotofcampaign.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofage.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofduration.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/boxplotofcampaign.png?raw=true)
 
 ### Feature Engineering
 #### Frequency Encoding
@@ -218,12 +218,12 @@ Area Under Curve (AUC) membuat kita mudah dalam membandingkan model satu dengan 
 
 ### Model result
 Berikut plot hasil training dari model :
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/modelresult.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/modelresult.png?raw=true)
 
 Berikut tabel hasil metrics:
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/tabelhasil.png?raw=true)
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/tabelhasil.png?raw=true)
 
 #### Dapat kita ambil kesimpulan bahwa : model terbaik yaitu menggunakan RandomForestClassifier dengan accuracy [0.923578] dan roc_auc [0.935259] 
 
-Berikut plot ROC dari RandomForestClassifier terhadap data kita:
--- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/image/ROCcurve.png?raw=true)
+Berikut plot ROC Curve dari RandomForestClassifier terhadap data kita:
+-- ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/ROCcurve.png?raw=true)
