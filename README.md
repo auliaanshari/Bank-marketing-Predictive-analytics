@@ -10,8 +10,6 @@ Pendapatan bank-bank Portugis menurun dan mereka ingin tahu apa yang harus dilak
 
 Berdasarkan permasalahan diatas, pada proyek ini akan dibangun model machine learning untuk memprediksi nasabah lama yang kemungkinan akan menerima deposito berjangka. Dengan adanya model machine learning ini, di harapkan dapat membantu dan memudahkan analisa serta dapat mengambil keputusan yang tepat terkait pengidentifikasian nasabah dan dapat strategi marketing yang akan dilakukan bank. Kemudian untuk tahap pengembangan selanjutnya, di harapkan implementasi dari model ini dapat dijalankan pada sebuah aplikasi berbasis web ataupun android nantinya.
 
-Referensi : [A data-driven approach to predict the success of bank telemarketing](https://www.sciencedirect.com/science/article/pii/S016792361400061X)
-
 ## Business Understanding
 
 ### Problem Statements
@@ -282,3 +280,6 @@ Berikut tabel hasil metrics:
 Berikut plot ROC Curve dari RandomForestClassifier terhadap data kita:
 
 ![alt text](https://github.com/auliaanshari/Bank-marketing-Predictive-analytics/blob/main/image/ROCcurve.png?raw=true)
+
+# Referensi 
+[A data-driven approach to predict the success of bank telemarketing](https://www.sciencedirect.com/science/article/pii/S016792361400061X)
